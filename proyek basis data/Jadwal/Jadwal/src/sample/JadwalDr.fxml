@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="1015.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerJadwal">
+    <children>
+        <Text layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JADWAL DOKTER" underline="true" wrappingWidth="175.82397079467773">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Text>
+        <Separator layoutX="14.0" layoutY="49.0" prefHeight="0.0" prefWidth="986.0" />
+        <SplitPane dividerPositions="0.2444901954152151" layoutX="27.0" layoutY="58.0" prefHeight="525.0" prefWidth="954.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="359.0" prefWidth="210.0">
+                    <children>
+                        <Text layoutX="7.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Dokter" underline="true">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Text>
+                        <ComboBox fx:id="name" layoutX="7.0" layoutY="145.0" prefHeight="28.0" prefWidth="188.0" promptText="Select Name" />
+                        <Text layoutX="8.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal" underline="true">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Text>
+                        <DatePicker fx:id="setDate" layoutX="8.0" layoutY="202.0" onAction="#selectDate" prefHeight="29.0" prefWidth="188.0" promptText="MM/DD/YYYY" showWeekNumbers="true" />
+                        <ComboBox fx:id="menit1" layoutX="112.0" layoutY="264.0" prefHeight="29.0" prefWidth="83.0" promptText="Menit" visibleRowCount="5" />
+                        <Text layoutX="9.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jam Mulai Praktek" underline="true">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="10.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jam Selesai Praktek" underline="true">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Text>
+                        <Button fx:id="save" layoutX="15.0" layoutY="434.0" mnemonicParsing="false" onAction="#saveJadwal" text="SIMPAN">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font></Button>
+                        <Button fx:id="delete" layoutX="127.0" layoutY="433.0" mnemonicParsing="false" onAction="#deleteJadwal" prefHeight="27.0" prefWidth="67.0" text="HAPUS">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font></Button>
+                        <ComboBox fx:id="jam1" layoutX="8.0" layoutY="264.0" prefHeight="29.0" prefWidth="84.0" promptText="Jam" visibleRowCount="5" />
+                        <ComboBox fx:id="jam2" layoutX="9.0" layoutY="330.0" prefHeight="29.0" prefWidth="83.0" promptText="Jam" visibleRowCount="5" />
+                        <ComboBox fx:id="menit2" layoutX="113.0" layoutY="330.0" prefHeight="29.0" prefWidth="83.0" promptText="Menit" visibleRowCount="5" />
+                        <Text layoutX="9.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Tempat" underline="true">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Text>
+                        <ComboBox fx:id="tpt" layoutX="9.0" layoutY="26.0" prefHeight="28.0" prefWidth="188.0" promptText="Select Place" />
+                        <Button fx:id="update" layoutX="65.0" layoutY="470.0" mnemonicParsing="false" onAction="#updateJadwal" prefHeight="29.0" prefWidth="79.0" text="UPDATE">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Button>
+                        <Text layoutX="101.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                            <font>
+                                <Font size="17.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="101.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                            <font>
+                                <Font size="17.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="10.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kuota Pasien" underline="true">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Text>
+                        <Spinner fx:id="kp" editable="true" layoutX="10.0" layoutY="390.0" prefHeight="27.0" prefWidth="132.0" />
+                  <Text layoutX="7.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spesialisasi" underline="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="spc" layoutX="8.0" layoutY="87.0" prefHeight="28.0" prefWidth="188.0" promptText="Select Spesialisasi" visibleRowCount="5" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="469.0" prefWidth="668.0">
+                    <children>
+                        <TableView fx:id="listJadwal" layoutX="-3.0" onMouseClicked="#getSelected" prefHeight="526.0" prefWidth="726.0">
+                            <columns>
+                                <TableColumn fx:id="namaDr" prefWidth="169.18811565637589" text="Nama Dokter" />
+                                <TableColumn fx:id="status" minWidth="0.0" prefWidth="80.7921142578125" text="Status " />
+                        <TableColumn fx:id="day" minWidth="0.0" prefWidth="80.7921142578125" text="Hari" />
+                                <TableColumn fx:id="date" minWidth="0.0" prefWidth="87.44558715820312" text="Tanggal" />
+                                <TableColumn fx:id="start" minWidth="0.0" prefWidth="96.0" text="Jam Mulai" />
+                                <TableColumn fx:id="end" minWidth="0.0" prefWidth="107.40594482421875" text="Jam Selesai" />
+                                <TableColumn fx:id="kuota" minWidth="0.0" prefWidth="97.90096871486742" text="Kuota Pasien" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="491.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <SplitPane dividerPositions="0.31877127037799047" layoutX="24.0" layoutY="58.0" prefHeight="394.0" prefWidth="653.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <ComboBox fx:id="NTP" layoutX="14.0" layoutY="54.0" prefHeight="42.0" prefWidth="180.0" promptText="Pilih Tempat Praktek" />
+                        <DatePicker fx:id="searchDate" editable="false" layoutX="13.0" layoutY="136.0" onAction="#tanggalCari" prefHeight="42.0" prefWidth="181.0" promptText="Tanggal Praktek" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="393.0" prefWidth="438.0">
+                    <children>
+                        <TableView fx:id="daftar" prefHeight="394.0" prefWidth="442.0">
+                            <columns>
+                                <TableColumn fx:id="namadr" prefWidth="227.16834026575089" text="Nama Dokter" />
+                                <TableColumn fx:id="namap" prefWidth="198.65347290039062" text="Nama Pasien" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+        <Text layoutX="24.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REPORT" underline="true">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>
