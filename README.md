@@ -1,2 +1,2 @@
 # Melissa-Portfolio
-Melissa coding &amp; UI UX design college projects
+Melissa programming - UI UX design college projects
